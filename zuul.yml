@@ -1,0 +1,14 @@
+zuul:
+  routes:
+    soapclient:
+      path: /v1.0/login/**
+      stripPrefix: false
+      sensitiveHeaders: ''
+      url: http://localhost:5050
+
+    default:
+      path: /**
+      url: http://localhost:8080/
+      sensitiveHeaders: ''
+
+

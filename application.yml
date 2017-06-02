@@ -1,0 +1,10 @@
+## Master configuration file ##
+logging:
+  level:
+    com.ingdirect.pocspringws: DEBUG
+  file: /var/tmp/${spring.application.name}.log
+  pattern:
+    console: '%d{HH:mm:ss.SSS} %highlight(%-5level) %cyan([%logger{5}.%M:%L]) - %msg%n'
+    file: '%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level [%logger{5}.%M:%L] - %msg%n'
+zuul:
+  url: http://localhost:80
