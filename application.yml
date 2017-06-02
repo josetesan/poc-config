@@ -4,22 +4,19 @@ logging:
     com.ingdirect.pocspringws: DEBUG
   file: /var/tmp/${spring.application.name}.log
   pattern:
-    console: '%d{HH:mm:ss.SSS} %highlight(%-5level) %cyan([%logger{5}.%M:%L]) - %msg%n'
-    file: '%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level [%logger{5}.%M:%L] - %msg%n'
-zuul:
-  url: http://localhost:80
-
+    console: '%d{HH:mm:ss.SSS} %highlight(%-5level) %cyan([%logger{5}.%M]) - %msg%n'
+    file: '%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level [%logger{5}.%M] - %msg%n'
 
 spring:
   zipkin:
-    baseUrl: http://localhost:9411/
+    baseUrl: http://zipkin:9411/
     enabled: true
   sleuth:
     sampler:
       percentage: 1.0
   boot:
     admin:
-      url: http://localhost:10060
+      url: http://admin:10060
 # 	Since Spring Boot 1.5.x all endpoints are secured by default. For the sake of brevity we’re disabling the security for now.
   management:
     security:
