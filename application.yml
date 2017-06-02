@@ -17,3 +17,6 @@ spring:
   sleuth:
     sampler:
       percentage: 1.0
+  boot:
+    admin:
+      url: http://localhost:10060
