@@ -8,3 +8,12 @@ logging:
     file: '%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level [%logger{5}.%M:%L] - %msg%n'
 zuul:
   url: http://localhost:80
+
+
+spring:
+  zipkin:
+    baseUrl: http://localhost:9411/
+    enabled: true
+  sleuth:
+    sampler:
+      percentage: 1.0
