@@ -20,3 +20,7 @@ spring:
   boot:
     admin:
       url: http://localhost:10060
+# 	Since Spring Boot 1.5.x all endpoints are secured by default. For the sake of brevity we’re disabling the security for now.
+  management:
+    security:
+      enabled: false
