@@ -4,11 +4,9 @@ zuul:
       path: /v1.0/login/**
       stripPrefix: false
       sensitiveHeaders: ''
-      url: http://localhost:5050
+      url: http://soapserver:8080
 
     default:
       path: /**
-      url: http://localhost:8080/
+      url: http://frontend:8080
       sensitiveHeaders: ''
-
-
