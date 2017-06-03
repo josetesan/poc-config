@@ -13,7 +13,7 @@ spring:
     enabled: true
   sleuth:
     sampler:
-      percentage: 1.0
+      percentage: 0.2
   boot:
     admin:
       url: http://admin:10060
