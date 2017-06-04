@@ -7,6 +7,11 @@ logging:
     console: '%d{HH:mm:ss.SSS} %highlight(%-5level) %cyan([%logger{5}.%M]) - %msg%n'
     file: '%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level [%logger{5}.%M] - %msg%n'
 
+#Since Spring Boot 1.5.x all endpoints are secured by default. For the sake of brevity we’re disabling the security for now.    
+management:
+   security:
+     enabled: false
+
 spring:
   zipkin:
     baseUrl: http://zipkin:9411/
@@ -17,7 +22,3 @@ spring:
   boot:
     admin:
       url: http://admin:10060
-# 	Since Spring Boot 1.5.x all endpoints are secured by default. For the sake of brevity we’re disabling the security for now.
-  management:
-    security:
-      enabled: false
