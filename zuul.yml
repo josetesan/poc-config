@@ -1,11 +1,10 @@
 zuul:
   routes:
-    soapclient:
+    soap:
       path: /v1.0/airport/**
       stripPrefix: false
       sensitiveHeaders: ''
       url: http://soapclient:8080
-
     default:
       path: /**
       url: http://frontend:8080
